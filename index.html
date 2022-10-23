@@ -8,12 +8,16 @@
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
-    <header>
+    <header class="container">
         <div class="title">Etch-a-Sketch</div>
         <div class="logo">An app by <a href="https://github.com/maxikaye">Maxi Kaye</a></div>
     </header>
-    <div class="art-grid"></div>
-    <footer>
+    <div class="slider container">
+        <input type="range" min="2" max="100" value="16" id="resolution">
+        <p><label for="range">Grid Resolution</label>: <span class="resolution-value">16</span></p>
+    </div>
+    <div class="art-grid container"></div>
+    <footer class="container">
         <p>Code c/o <a href="https://github.com/maxikaye">Maxi Kaye</a> 2022</p>
     </footer>
 

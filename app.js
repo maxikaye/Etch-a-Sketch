@@ -3,13 +3,14 @@
    by Maxi Kaye 2022 */
 
 let gridUnit = 16;
+const artGrid = document.querySelector('.art-grid');
+const artGridProps = window.getComputedStyle(artGrid);
+const gridSideLength = parseInt(artGridProps.getPropertyValue('width'));
+const gridGap = parseInt(artGridProps.getPropertyValue('gap'));
+const slider = document.getElementById('resolution');
+const sliderValue = document.querySelector('.resolution-value');
 
-function createGrid(size) {
-    const artGrid = document.querySelector('.art-grid');
-    const artGridProps = window.getComputedStyle(artGrid);
-    const gridSideLength = parseInt(artGridProps.getPropertyValue('width'));
-    const gridGap = parseInt(artGridProps.getPropertyValue('gap'));
-    
+function createGrid(size) {  
     for (let i = 0; i < size ** 2; i++) {
         const gridSquare = document.createElement('div');
         gridSquare.classList.add('grid-square');
@@ -20,11 +21,31 @@ function createGrid(size) {
     }
 }
 
-createGrid(gridUnit);
+function removeOldGrid(size) {
+    for (let i = 0; i < size ** 2; i ++) {
+        const squaresToRemove = document.querySelectorAll('.grid-square');
+        squaresToRemove.forEach(square => artGrid.removeChild(square));
+    }
+}
 
-const gridSquares = document.querySelectorAll('.grid-square');
-gridSquares.forEach(square => {
-    square.addEventListener('mouseover', () => {
+function toggleColors() {
+    const gridSquares = document.querySelectorAll('.grid-square');
+    gridSquares.forEach(square => {
+        square.addEventListener('mouseover', () => {
         square.classList.toggle('grid-square-black');
+        });
     });
-});
+}
+
+createGrid(gridUnit);
+toggleColors();
+
+slider.oninput = () => {
+    sliderValue.innerHTML = slider.value;
+    removeOldGrid(gridUnit);
+    gridUnit = slider.value;
+    createGrid(gridUnit);
+    toggleColors();
+}
+
+
