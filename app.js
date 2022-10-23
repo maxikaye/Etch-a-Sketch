@@ -20,8 +20,11 @@ function createGrid(size) {
     }
 }
 
-function changeColor() {}
-
 createGrid(gridUnit);
 
-// on mouseover 
+const gridSquares = document.querySelectorAll('.grid-square');
+gridSquares.forEach(square => {
+    square.addEventListener('mouseover', () => {
+        square.classList.toggle('grid-square-black');
+    });
+});

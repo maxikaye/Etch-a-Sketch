@@ -33,3 +33,7 @@ footer {
 .grid-square {
     background-color: #AAA;
  }
+
+ .grid-square-black {
+    background-color: #333;
+ }
