@@ -28,7 +28,7 @@ function removeOldGrid(size) {
     }
 }
 
-function toggleColors() {
+function addColor() {
     const gridSquares = document.querySelectorAll('.grid-square');
     gridSquares.forEach(square => {
         square.addEventListener('mouseover', () => {
@@ -38,14 +38,14 @@ function toggleColors() {
 }
 
 createGrid(gridUnit);
-toggleColors();
+addColor();
 
 slider.oninput = () => {
     sliderValue.innerHTML = slider.value;
     removeOldGrid(gridUnit);
     gridUnit = slider.value;
     createGrid(gridUnit);
-    toggleColors();
+    addColor();
 }
 
 
