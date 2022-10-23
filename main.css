@@ -1,0 +1,35 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header,
+footer {
+    display: flex;
+    margin: 12px 0;
+}
+
+.art-grid {
+    width: 640px;
+    height: 640px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    gap: 2px;
+  }
+
+.grid-square {
+    background-color: #AAA;
+ }
