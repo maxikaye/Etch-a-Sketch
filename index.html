@@ -9,16 +9,31 @@
 </head>
 <body>
     <header class="container">
-        <div class="title">Etch-a-Sketch</div>
-        <div class="logo">An app by <a href="https://github.com/maxikaye">Maxi Kaye</a></div>
+        <div class="title">Etch-a-Sketch | Pixel Art Pad</div>
+        <div class="logo">by <a href="https://github.com/maxikaye">Maxi Kaye</a></div>
     </header>
-    <div class="slider container">
+    <section class="workspace container">
+        <div class="color-palette">
+            <div class="swatch" id="swatch-black"></div>
+            <div class="swatch" id="swatch-black-low-opacity"></div>
+            <div class="swatch" id="swatch-white"></div>
+            <div class="swatch" id="swatch-rainbow"></div>
+            <div class="swatch" id="swatch-red"></div>
+            <div class="swatch" id="swatch-orange"></div>
+            <div class="swatch" id="swatch-yellow"></div>
+            <div class="swatch" id="swatch-green"></div>
+            <div class="swatch" id="swatch-blue"></div>
+            <div class="swatch" id="swatch-purple"></div>
+        </div>
+        <div class="art-grid"></div>
+    </section>
+    <div class="slider">
         <input type="range" min="2" max="100" value="16" id="resolution">
         <p><label for="range">Grid Resolution</label>: <span class="resolution-value">16</span></p>
     </div>
-    <div class="art-grid container"></div>
+
     <footer class="container">
-        <p>Code c/o <a href="https://github.com/maxikaye">Maxi Kaye</a> 2022</p>
+        <p>Code + Design c/o <a href="https://github.com/maxikaye">Maxi Kaye</a> 2022</p>
     </footer>
 
     <script src="./app.js"></script>

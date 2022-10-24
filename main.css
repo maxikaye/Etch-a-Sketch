@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 html {
     box-sizing: border-box;
 }
@@ -9,6 +11,8 @@ html {
 }
 
 body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -16,32 +20,100 @@ body {
     height: 100vh;
 }
 
+a {
+    text-decoration: none;
+    color: #DDD;
+    font-weight: 700;
+}
+
 .container {
-    max-width: 640px;
+    max-width: 800px;
 }
 
 header,
 footer {
     display: flex;
-    padding: 12px 0;
+    min-width: 800px;
+    padding: 12px 24px;
+    color: #FFF;
 }
 
-.slider {
-    padding: 12px 0;
-    width: 80%;
+header {
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(#555,#AAA);
 }
 
-#resolution {
-    appearance: none;
-    width: 100%;
-    height: 24px;
-    background: #AAA;
-    outline: none;
+.logo {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.workspace {
+    display: flex;
+}
+
+.color-palette {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.swatch {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+}
+
+#swatch-black {
+    background-color: #000;
+}
+
+#swatch-black-low-opacity {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#swatch-white {
+    background-color: #fff;
+}
+
+#swatch-rainbow {
+    background: linear-gradient(140deg, red, orange, yellow, green, blue, purple);
+}
+
+#swatch-red {
+    background-color: rgb(255,25,25);
+}
+
+#swatch-orange {
+    background-color: rgb(255,179,25);
+}
+
+#swatch-yellow {
+    background-color: rgb(255,255,0);
+}
+
+#swatch-green {
+    background-color: rgb(0,179,0);
+}
+
+#swatch-blue {
+    background-color: rgb(0,85,255);
+}
+
+#swatch-purple {
+    background-color: rgb(191,0,230);
 }
 
 .art-grid {
     width: 640px;
     height: 640px;
+    margin: 0 24px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -53,6 +125,27 @@ footer {
     background-color: #AAA;
  }
 
- .grid-square-black {
+.grid-square-black {
     background-color: #333;
  }
+
+ .slider {
+    padding: 24px 0;
+    margin: 0 auto;
+    width: 500px;
+    text-align: center;
+}
+
+#resolution {
+    appearance: none;
+    width: 100%;
+    height: 24px;
+    background: #AAA;
+    outline: none;
+}
+
+ footer {
+    font-size: 16px;
+    font-weight: 300;
+    background: linear-gradient(0deg, #555, #AAA);
+}
