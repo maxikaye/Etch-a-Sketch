@@ -9,6 +9,8 @@ const gridSideLength = parseInt(artGridProps.getPropertyValue('width'));
 const gridGap = parseInt(artGridProps.getPropertyValue('gap'));
 const slider = document.getElementById('resolution');
 const sliderValue = document.querySelector('.resolution-value');
+const colorSwatches = document.querySelectorAll('.swatch')
+let currentColor = 'swatch-black';
 
 function createGrid(size) {  
     for (let i = 0; i < size ** 2; i++) {
@@ -28,11 +30,29 @@ function removeOldGrid(size) {
     }
 }
 
-function addColor(color = 'grid-square-black') {
+function randomColorValue() {
+    return Math.floor(Math.random() * 255)
+}
+
+function addColor(color = 'swatch-black') {
     const gridSquares = document.querySelectorAll('.grid-square');
     gridSquares.forEach(square => {
-        square.addEventListener('mouseover', () => {
-        square.classList.add('grid-square-black');
+        square.addEventListener('mouseover', e => {
+            square.classList.remove(currentColor);
+            console.log(e.target.classList)
+            if (color === 'swatch-rainbow') {
+                square.style.backgroundColor = 'rgb(' +
+                    randomColorValue() + ',' +
+                    randomColorValue() + ',' +
+                    randomColorValue() + ')';
+            } else if (color === 'swatch-black-low-opacity') {
+                square.style.backgroundColor = null;
+                square.classList.add(color);
+            } else {
+                square.style.backgroundColor = null;
+                square.classList.add(color);
+            }
+            currentColor = color;
         });
     });
 }
@@ -47,3 +67,9 @@ slider.oninput = () => {
     createGrid(gridUnit);
     addColor();
 }
+
+colorSwatches.forEach(swatch => {
+    swatch.addEventListener('click', e => {
+        addColor(e.target.classList[1]);
+    }) 
+});

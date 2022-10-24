@@ -18,6 +18,7 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 100vh;
+    background-color: rgb(138, 138, 138);
 }
 
 a {
@@ -39,6 +40,7 @@ footer {
 }
 
 header {
+    margin-bottom: 36px;
     justify-content: space-between;
     align-items: center;
     background: linear-gradient(#555,#AAA);
@@ -70,46 +72,6 @@ header {
     border: 1px solid black;
 }
 
-#swatch-black {
-    background-color: #000;
-}
-
-#swatch-black-low-opacity {
-    background-color: rgba(0, 0, 0, 0.1);
-}
-
-#swatch-white {
-    background-color: #fff;
-}
-
-#swatch-rainbow {
-    background: linear-gradient(140deg, red, orange, yellow, green, blue, purple);
-}
-
-#swatch-red {
-    background-color: rgb(255,25,25);
-}
-
-#swatch-orange {
-    background-color: rgb(255,179,25);
-}
-
-#swatch-yellow {
-    background-color: rgb(255,255,0);
-}
-
-#swatch-green {
-    background-color: rgb(0,179,0);
-}
-
-#swatch-blue {
-    background-color: rgb(0,85,255);
-}
-
-#swatch-purple {
-    background-color: rgb(191,0,230);
-}
-
 .art-grid {
     width: 640px;
     height: 640px;
@@ -118,18 +80,55 @@ header {
     flex-wrap: wrap;
     justify-content: flex-start;
     align-content: flex-start;
-    gap: 2px;
+    gap: 0;
   }
 
 .grid-square {
-    background-color: #AAA;
+    background-color: rgb(245, 245, 245);
  }
+ 
+ .swatch-black {
+    background-color: #000;
+}
 
-.grid-square-black {
-    background-color: #333;
- }
+.swatch-black-low-opacity {
+    background-color: rgb(0, 0, 0);
+    opacity: 0.1;
+}
 
- .slider {
+.swatch-white {
+    background-color: #fff;
+}
+
+.swatch-rainbow {
+    background: linear-gradient(140deg, red, orange, yellow, green, blue, purple);
+}
+
+.swatch-red {
+    background-color: rgb(255,25,25);
+}
+
+.swatch-orange {
+    background-color: rgb(255,179,25);
+}
+
+.swatch-yellow {
+    background-color: rgb(255,255,0);
+}
+
+.swatch-green {
+    background-color: rgb(0,179,0);
+}
+
+.swatch-blue {
+    background-color: rgb(0,85,255);
+}
+
+.swatch-purple {
+    background-color: rgb(191,0,230);
+}
+
+.slider {
     padding: 24px 0;
     margin: 0 auto;
     width: 500px;
@@ -145,6 +144,7 @@ header {
 }
 
  footer {
+    margin-top: auto;
     font-size: 16px;
     font-weight: 300;
     background: linear-gradient(0deg, #555, #AAA);
