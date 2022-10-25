@@ -8,33 +8,34 @@
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
-    <header class="container">
-        <div class="title">Etch-a-Sketch | Pixel Art Pad</div>
-        <div class="logo">by <a href="https://github.com/maxikaye">Maxi Kaye</a></div>
-    </header>
-    <section class="workspace container">
-        <div class="color-palette">
-            <div class="swatch swatch-black"></div>
-            <div class="swatch swatch-dk-gray"></div>
-            <div class="swatch swatch-lt-gray"></div>
-            <div class="swatch swatch-white"></div>
-            <div class="swatch swatch-rainbow"></div>
-            <div class="swatch swatch-red"></div>
-            <div class="swatch swatch-orange"></div>
-            <div class="swatch swatch-yellow"></div>
-            <div class="swatch swatch-green"></div>
-            <div class="swatch swatch-blue"></div>
-            <div class="swatch swatch-purple"></div>
-            <div class="swatch swatch-pink"></div>
-            <div class="swatch swatch-brown"></div>
+    <div class="package">
+        <header class="container">
+            <div class="title">Etch-a-Sketch <span class="sub-title">Pixel Art Toy</span></div>
+            <div class="logo">by <a href="https://github.com/maxikaye">Maxi Kaye</a></div>
+        </header>
+        <section class="workspace container">
+            <div class="color-palette">
+                <div class="swatch swatch-black"></div>
+                <div class="swatch swatch-dk-gray"></div>
+                <div class="swatch swatch-lt-gray"></div>
+                <div class="swatch swatch-white"></div>
+                <div class="swatch swatch-rainbow"></div>
+                <div class="swatch swatch-red"></div>
+                <div class="swatch swatch-orange"></div>
+                <div class="swatch swatch-yellow"></div>
+                <div class="swatch swatch-green"></div>
+                <div class="swatch swatch-blue"></div>
+                <div class="swatch swatch-purple"></div>
+                <div class="swatch swatch-pink"></div>
+                <div class="swatch swatch-brown"></div>
+            </div>
+            <div class="art-grid"></div>
+        </section>
+        <div class="slider">
+            <input type="range" min="2" max="100" value="16" id="resolution">
+            <p><label for="range">Grid Resolution</label>: <span class="resolution-value">16</span></p>
         </div>
-        <div class="art-grid"></div>
-    </section>
-    <div class="slider">
-        <input type="range" min="2" max="100" value="16" id="resolution">
-        <p><label for="range">Grid Resolution</label>: <span class="resolution-value">16</span></p>
     </div>
-
     <footer class="container">
         <p>Code + Design c/o <a href="https://github.com/maxikaye">Maxi Kaye</a> 2022</p>
     </footer>

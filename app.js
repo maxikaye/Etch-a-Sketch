@@ -1,5 +1,5 @@
 /* Etch-a-Sketch
-   Art pad drawing app
+   Art pad drawing toy
    by Maxi Kaye 2022 */
 
 let gridUnit = 16;
@@ -9,6 +9,7 @@ const gridSideLength = parseInt(artGridProps.getPropertyValue('width'));
 const gridGap = parseInt(artGridProps.getPropertyValue('gap'));
 const slider = document.getElementById('resolution');
 const sliderValue = document.querySelector('.resolution-value');
+sliderValue.innerHTML = `${slider.value} x ${slider.value}`;
 const colorSwatches = document.querySelectorAll('.swatch')
 let currentColor = 'swatch-black';
 
@@ -58,7 +59,7 @@ createGrid(gridUnit);
 addColor();
 
 slider.oninput = () => {
-    sliderValue.innerHTML = slider.value;
+    sliderValue.innerHTML = `${slider.value} x ${slider.value}`;
     removeOldGrid(gridUnit);
     gridUnit = slider.value;
     createGrid(gridUnit);
@@ -70,3 +71,7 @@ colorSwatches.forEach(swatch => {
         addColor(e.target.classList[1]);
     }) 
 });
+
+// TODO: 
+// Add darken/light|dodge/burn tools
+// Add save/load art function/button
