@@ -45,9 +45,6 @@ function addColor(color = 'swatch-black') {
                     randomColorValue() + ',' +
                     randomColorValue() + ',' +
                     randomColorValue() + ')';
-            } else if (color === 'swatch-black-low-opacity') {
-                square.style.backgroundColor = null;
-                square.classList.add(color);
             } else {
                 square.style.backgroundColor = null;
                 square.classList.add(color);
